@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="div-var">Lorem ipsum dolor sit amet.</div>
   </div>
 </template>
 
@@ -9,3 +9,11 @@ export default {
   name: 'Home'
 }
 </script>
+
+<style lang="scss" scoped>
+.div-var {
+  color: $yellow;
+  @include clearfix;
+  box-shadow: 2px 2px 5px #333333;
+}
+</style>
