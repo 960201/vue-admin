@@ -1,4 +1,9 @@
 import Vue from 'vue'
+
+import 'normalize.css' // reset css
+
+import '@/styles/index.scss' // global css
+
 import App from './App.vue'
 import router from './router'
 import store from './store'
