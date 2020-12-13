@@ -1,7 +1,5 @@
 <template>
-  <div class="login-container">
-    login
-  </div>
+  <div>sidebarItem</div>
 </template>
 
 <script>
