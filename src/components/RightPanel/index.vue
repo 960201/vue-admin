@@ -1,6 +1,6 @@
 <template>
-  <div class="login-container">
-    login
+  <div>
+    rightPanel
   </div>
 </template>
 

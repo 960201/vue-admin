@@ -19,6 +19,45 @@ export const constantRoutes = [
   }
 ]
 
+export const asyncRoutes = [
+  {
+    path: '/icon',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/icons/index'),
+        name: 'Icons',
+        meta: { title: 'Icons', icon: 'icon', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/chart',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/charts/index'),
+        name: 'Charts',
+        meta: { title: 'Charts', icon: 'icon', noCache: true }
+      }
+    ]
+  },
+  {
+    path: '/pdf',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/pdf/index'),
+        name: 'Pdf',
+        meta: { title: 'Pdf', icon: 'icon', noCache: true }
+      }
+    ]
+  }
+]
+
 const createRouter = () =>
   new VueRouter({
     // mode: 'history', // require service support
