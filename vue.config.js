@@ -24,5 +24,22 @@ module.exports = {
     }
     // requireModuleExtension: false, // 如果你想去掉文件名中的 .module
     // modules: false // 启用 CSS modules for all css / pre-processor files.
+  },
+  chainWebpack: config => {
+    config.module
+      .rule('svg')
+      .exclude.add(resolve('src/icons'))
+      .end()
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(resolve('src/icons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+      .end()
   }
 }
