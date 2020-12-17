@@ -1,7 +1,5 @@
 <template>
-  <div class="login-container">
-    login
-  </div>
+  <div class="login-container">login<svg-icon icon-class="user" /></div>
 </template>
 
 <script>
